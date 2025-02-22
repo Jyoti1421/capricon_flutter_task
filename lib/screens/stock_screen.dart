@@ -47,7 +47,7 @@ class _StockScreenState extends ConsumerState<StockScreen> {
           IconButton(
             onPressed: () async {
               FocusScope.of(context).unfocus();
-               // Logout the user by setting the login status to false
+              // Logout the user by setting the login status to false
               await ref.read(loginStateProvider.notifier).setLoginStatus(false);
               await ref.read(authProvider.notifier).logout();
               Navigator.pushReplacementNamed(context, Routes.login);
